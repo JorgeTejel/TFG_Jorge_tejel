@@ -14,7 +14,8 @@ class ComponenteController extends Controller
      */
     public function index()
     {               
-        return view('Componentes.index');   //Este Componentes viene de las views
+        $Componente = componente::all();
+        return view('Componentes.index', ['Componente' => $Componente]);   //Este Componentes viene de las views
     }
 
     /**
@@ -31,13 +32,25 @@ class ComponenteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nº_de_Bastidor' => 'required|unique:alumnos|max:10',
+            'nº_de_Bastidor' => 'required|unique:Componentes|max:10',
             'nombre' => 'required|max:255',
             'fecha' => 'required|date',
             'precio' => 'required',
             'stock' => 'nullable|max:255',
             'marca' => 'required',
         ]);
+
+        $Componente = new componente();
+        $Componente->nº_de_Bastidor = $request->input('nº_de_Bastidor');
+        $Componente->nombre = $request->input('nombre');
+        $Componente->fecha_adquicision = $request->input('fecha');
+        $Componente->precio = $request->input('precio');
+        $Componente->stock = $request->input('stock');
+        $Componente->marca_id = $request->input('marca');
+        $Componente->save();
+
+        return view("Componentes.message", ['msg' => "Registro guardado"]);
+
     }
 
     /**
@@ -51,24 +64,46 @@ class ComponenteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Componente $componente)
+    public function edit($id)
     {
-        //
+        $componente = Componente::find($id);
+        return view('Componentes.edit', ['componente' => $componente, 'marcas' => Marca::all()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Componente $componente)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nº_de_Bastidor' => 'required|max:10|unique:Componentes,nº_de_Bastidor,'.$id,
+            'nombre' => 'required|max:255',
+            'fecha' => 'required|date',
+            'precio' => 'required',
+            'stock' => 'nullable|max:255',
+            'marca' => 'required',
+        ]);
+        
+        $Componente = componente::find($id);
+        $Componente->nº_de_Bastidor = $request->input('nº_de_Bastidor');
+        $Componente->nombre = $request->input('nombre');
+        $Componente->fecha_adquicision = $request->input('fecha');
+        $Componente->precio = $request->input('precio');
+        $Componente->stock = $request->input('stock');
+        $Componente->marca_id = $request->input('marca');
+        $Componente->save();
+
+        return view("Componentes.message", ['msg' => "Registro modificado"]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Componente $componente)
+    public function destroy($id)
     {
-        //
+        $Componente = Componente::find($id);
+        $Componente->delete();
+
+        return redirect("componentes");
     }
 }
