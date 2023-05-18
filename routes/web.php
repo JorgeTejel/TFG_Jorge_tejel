@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::resource('/componentes', ComponenteController::class);
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

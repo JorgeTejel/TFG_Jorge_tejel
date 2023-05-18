@@ -16,6 +16,7 @@ class ComponenteController extends Controller
     {               
         $Componente = componente::all();
         return view('Componentes.index', ['Componente' => $Componente]);   //Este Componentes viene de las views
+        
     }
 
     /**
