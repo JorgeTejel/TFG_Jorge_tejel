@@ -35,49 +35,46 @@
             }
 
             .footer {
-  background-color: #333333;
-  padding: 20px 0;
-  color: white;
-}
+                background-color: #333333;
+                padding: 20px 0;
+                color: white;
+            }
 
-.footer .logo-container img {
-  width: 250px;
-  height: auto;
-  margin-bottom: 10px;
-}
+            .footer .logo-container img {
+                width: 250px;
+                height: auto;
+                margin-bottom: 10px;
+            }
 
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
+            .footer-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
 
-.logo-container {
-  margin-left: auto;
-}
+            .logo-container {
+                margin-left: auto;
+            }
 
-.logo {
-  max-width: 100%;
-  height: auto;
-}
+            .logo {
+                max-width: 100%;
+                height: auto;
+            }
 
-.social-media-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.social-logo {
-  width: 60px;
-  height: 60px;
-  margin: 0 10px;
-}
+            .social-media-container {
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
 
-
+            .social-logo {
+                width: 60px;
+                height: 60px;
+                margin: 0 10px;
+            }
 
         </style>
 
@@ -87,19 +84,19 @@
     </head>
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-        @if (Route::has('login'))
-            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="btn btn-secondary">Dashboard</a>
-                @else
-                    <a href="{{ route('login') }}" class="btn btn-secondary">INICIAR SESIÓN</a>
+            @if (Route::has('login'))
+                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="btn btn-secondary">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="btn btn-secondary">INICIAR SESIÓN</a>
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="btn btn-secondary ml-4">REGISTRARSE</a>
-                    @endif
-                @endauth
-            </div>
-        @endif
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="btn btn-secondary ml-4">REGISTRARSE</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
 
 
             
@@ -186,27 +183,20 @@
         </div>
 
         <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <h5 class="text-center">Copyright © 2023 Rider´s Hub</h5>
-            <div class="social-media-container text-center">
-                <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" class="social-logo"></a>
-                <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" class="social-logo"></a>
-                <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" class="social-logo"></a>
+            <div class="container">
+                <div class="footer-content">
+                    <h5 class="text-center">Copyright © 2023 Rider´s Hub</h5>
+                    <div class="social-media-container text-center">
+                        <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" class="social-logo"></a>
+                        <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" class="social-logo"></a>
+                        <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" class="social-logo"></a>
+                    </div>
+                    <div class="logo-container ml-auto">
+                        <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
+                    </div>
+                </div>
             </div>
-            <div class="logo-container ml-auto">
-                <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-
-
-
-        
-
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
