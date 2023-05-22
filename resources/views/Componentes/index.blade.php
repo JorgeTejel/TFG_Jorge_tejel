@@ -5,6 +5,7 @@
 @section('contenido')
 
 <main>
+
     <div class="container py-4">
         <h2>Stock de Componentes</h2>
 
@@ -49,6 +50,8 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('dashboard') }}" class="btn btn-primary">Volver al Dashboard</a>
+        <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">Volver al Dashboard</a>
+        
+
     </div>
 </main>
