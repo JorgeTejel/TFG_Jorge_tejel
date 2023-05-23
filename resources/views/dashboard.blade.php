@@ -28,8 +28,8 @@
     }
  
     .logo {
-      max-width: 100px;
-     }
+        max-width: 100px;
+    }
 
     .nav-container {
         display: flex;
@@ -132,9 +132,9 @@
     }
 
     .footer-col {
-            display: flex;
-            flex-direction: row;
-            gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
     }
 
   </style>
@@ -184,19 +184,19 @@
                         <img src="{{ asset('img/sram.png') }}" class="d-block w-100" alt="Trek">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Shimano">
+                        <img src="{{ asset('img/shimano.png') }}" class="d-block w-100" alt="Shimano">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/giant.png') }}" class="d-block w-100" alt="Sram">
+                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Sram">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/cube.png') }}" class="d-block w-100" alt="Cube">
+                        <img src="{{ asset('img/giant.png') }}" class="d-block w-100" alt="Cube">
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('img/campagnolo.png') }}" class="d-block w-100" alt="Campagnolo">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/shimano.png') }}" class="d-block w-100" alt="Giant">
+                        <img src="{{ asset('img/cube.png') }}" class="d-block w-100" alt="Giant">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

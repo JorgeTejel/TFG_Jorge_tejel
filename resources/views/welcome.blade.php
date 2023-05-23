@@ -37,34 +37,37 @@
             /* FOOTER */
             .footer {
                 background-color: #333333;
-                padding: 20px 0;
+                padding: 10px 2rem;
                 color: white;
-            }
-
-            .footer .logo-container img {
-                width: 250px;
-                height: auto;
-                margin-bottom: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 2;
             }
 
             .footer-content {
                 display: flex;
-                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
             }
 
-            .social-media-container {
+            .text-left {
                 flex-grow: 1;
+            }
+
+            .social-media-container {
                 display: flex;
-                justify-content: center;
                 align-items: center;
             }
 
-            .social-logo {
-                width: 60px;
-                height: 60px;
-                margin: 0 10px;
+            .footer-col {
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+            }
+
+            .logofooter {
+                max-width: 100px;
             }
 
             /* LOGO */
@@ -182,19 +185,26 @@
         </div>
 
         <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <h5 class="text-center">Copyright © 2023 Rider´s Hub</h5>
-                    <div class="social-media-container text-center">
-                        <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" class="social-logo"></a>
-                        <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" class="social-logo"></a>
-                        <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" class="social-logo"></a>
+        <!-- <div class="container"> -->
+            <div class="footer-content">
+                <span>
+                    Copyright © 2023 Rider´s Hub
+                    <br>
+                    Contacto: ridershub@ridersdata.com
+                    <br>
+                    Dirección: Pl. de Antonio Beltrán Martínez, 1, 50002 Zaragoza
+                </span>
+                <div class="footer-col">
+                    <div class="social-media-container">
+                        <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" width="40px" class="social-logo"></a>
+                        <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" width="40px" class="social-logo"></a>
+                        <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" width="40px" class="social-logo"></a>
                     </div>
-                    <div class="logo-container ml-auto">
-                        <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
-                    </div>
+                        <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logofooter">
+        
                 </div>
             </div>
+        <!-- </div> -->
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
