@@ -56,6 +56,13 @@
         margin: 0 10px;
     }
 
+    main {
+        height: 100%;
+        display: flex;
+        /* align-items: center; */
+        padding-top: 5rem;
+    }
+
     </style>
 
 </head>

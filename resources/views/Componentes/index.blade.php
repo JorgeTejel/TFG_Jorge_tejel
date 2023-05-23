@@ -6,7 +6,7 @@
 
 <main>
 
-    <div class="container py-4">
+    <div class="container py-4" style="background: white; padding: 4rem; margin: 0 auto; border-radius: 10px; height: fit-content;">
         <h2>Stock de Componentes</h2>
 
 
