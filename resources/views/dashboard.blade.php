@@ -116,35 +116,26 @@
         z-index: 2;
     }
 
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    .text-left {
+        flex-grow: 1;
+    }
 
-.text-left {
-  flex-grow: 1;
-}
+    .social-media-container {
+        display: flex;
+        align-items: center;
+    }
 
-.social-media-container {
-  display: flex;
-  align-items: center;
-}
-
-.footer-col {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-}
-
-/* .social-logo {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
-} */
-
-
+    .footer-col {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+    }
 
   </style>
 </head>
@@ -164,7 +155,15 @@
             </ul>
         </nav>
         <div>
-            <button>PERFIL</button>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Opciones
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Editar</a></li>
+                    <li><a class="dropdown-item" href="{{ route('logout') }}">Cerrar Sesión</a></li>
+                </ul>
+            </div>
         </div>
     </div>
   </header>
@@ -182,13 +181,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Trek">
+                        <img src="{{ asset('img/sram.png') }}" class="d-block w-100" alt="Trek">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/giant.png') }}" class="d-block w-100" alt="Shimano">
+                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Shimano">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/sram.png') }}" class="d-block w-100" alt="Sram">
+                        <img src="{{ asset('img/giant.png') }}" class="d-block w-100" alt="Sram">
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('img/cube.png') }}" class="d-block w-100" alt="Cube">
@@ -220,7 +219,13 @@
     <footer class="footer">
         <!-- <div class="container"> -->
             <div class="footer-content">
-                <span>Copyright © 2023 Rider´s Hub</span>
+                <span>
+                    Copyright © 2023 Rider´s Hub
+                    <br>
+                    Contacto: ridershub@ridersdata.com
+                    <br>
+                    Dirección: Pl. de Antonio Beltrán Martínez, 1, 50002 Zaragoza
+                </span>
                 <div class="footer-col">
                     <div class="social-media-container">
                         <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" width="40px" class="social-logo"></a>
