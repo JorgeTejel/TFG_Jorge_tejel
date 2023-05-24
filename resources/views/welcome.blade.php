@@ -201,7 +201,6 @@
                         <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" width="40px" class="social-logo"></a>
                     </div>
                         <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logofooter">
-        
                 </div>
             </div>
         <!-- </div> -->

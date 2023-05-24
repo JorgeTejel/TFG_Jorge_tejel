@@ -181,22 +181,22 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ asset('img/sram.png') }}" class="d-block w-100" alt="Trek">
+                        <img src="{{ asset('img/sram.png') }}" class="d-block w-100" alt="Sram">
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('img/shimano.png') }}" class="d-block w-100" alt="Shimano">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Sram">
+                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Trek">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/giant.png') }}" class="d-block w-100" alt="Cube">
+                        <img src="{{ asset('img/giantNEW.png') }}" class="d-block w-100" alt="Giant">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/campagnolo.png') }}" class="d-block w-100" alt="Campagnolo">
+                        <img src="{{ asset('img/campagnoloNEW.png') }}" class="d-block w-100" alt="Campagnolo">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img/cube.png') }}" class="d-block w-100" alt="Giant">
+                        <img src="{{ asset('img/cube.png') }}" class="d-block w-100" alt="Cube">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -232,8 +232,7 @@
                         <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" width="40px" class="social-logo"></a>
                         <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" width="40px" class="social-logo"></a>
                     </div>
-                        <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
-        
+                    <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
                 </div>
             </div>
         <!-- </div> -->
