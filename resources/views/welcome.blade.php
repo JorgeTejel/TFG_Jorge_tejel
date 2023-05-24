@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link rel="icon" type="image/pg" href="{{ asset('img/logoRH.png') }}">
 
         <!-- Styles -->
         <style>
@@ -39,7 +40,7 @@
                 background-color: #333333;
                 padding: 10px 2rem;
                 color: white;
-                position: fixed;
+                position: relative;
                 bottom: 0;
                 width: 100%;
                 z-index: 2;

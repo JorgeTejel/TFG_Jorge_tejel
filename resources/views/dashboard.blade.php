@@ -104,6 +104,14 @@
         overflow:hidden;
     }
 
+    /* SLOGAN */
+
+    .slogan-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     /* FOOTER */
     .footer {
@@ -137,6 +145,31 @@
         gap: 3rem;
     }
 
+    .slogan-container {
+        background-color: transparent;
+        padding: 20px;
+        text-align: center;
+        margin-top: 2%;
+    }
+
+    .slogan-title {
+        font-family: 'Arial', sans-serif;
+        font-size: 40px;
+        margin: 0;
+        line-height: 1.2;
+        color: #333333;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .font-style {
+        font-family: 'Times New Roman', serif;
+        font-weight: bold;
+    }
+
+    .slogan-title em {
+        font-style: italic;
+    }
+
   </style>
 </head>
 <body>
@@ -151,7 +184,6 @@
                 <li><a href="#">Gestión</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Soporte Técnico</a></li>
-               
             </ul>
         </nav>
         <div>
@@ -213,8 +245,11 @@
         <div class="d-flex justify-content-center my-4">
             <a href="{{ route('componentes.index') }}" class="btn btn-secondary">Ir a Componentes</a>
         </div>
-
     </main>
+
+    <div class="slogan-container">
+        <h1 class="slogan-title">“Componentes en <span class="font-style">SINTONÍA</span>, stock en <span class="font-style">ARMONÍA</span>”</h1>
+    </div>
 
     <footer class="footer">
         <!-- <div class="container"> -->
