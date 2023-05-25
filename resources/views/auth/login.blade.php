@@ -37,7 +37,11 @@
         flex-direction: column;
         gap: 2rem;
         align-items: center;
-        background: white;
+        
+        background-image: url('img/fondogris.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     form {
@@ -97,9 +101,6 @@
 
 
 </style>
-
-
-
 
 <main>
     <!-- Session Status -->
