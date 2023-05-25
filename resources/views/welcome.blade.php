@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Rider´s Hub</title>
+        <title>Rider's Hub</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -92,7 +92,7 @@
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="btn btn-secondary">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="btn btn-secondary">INICIO</a>
                     @else
                         <a href="{{ route('login') }}" class="btn btn-secondary">INICIAR SESIÓN</a>
 
@@ -189,7 +189,7 @@
         <!-- <div class="container"> -->
             <div class="footer-content">
                 <span>
-                    Copyright © 2023 Rider´s Hub
+                    Copyright © 2023 Rider's Hub
                     <br>
                     Contacto: ridershub@ridersdata.com
                     <br>

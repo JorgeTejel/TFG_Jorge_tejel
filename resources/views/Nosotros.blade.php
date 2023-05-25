@@ -136,34 +136,6 @@
         gap: 3rem;
     }
 
-    .slogan-container {
-        background-color: transparent;
-        padding: 20px;
-        text-align: center;
-        margin-top: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .slogan-title {
-        font-family: 'Arial', sans-serif;
-        font-size: 40px;
-        margin: 0;
-        line-height: 1.2;
-        color: #333333;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .font-style {
-        font-family: 'Times New Roman', serif;
-        font-weight: bold;
-    }
-
-    .slogan-title em {
-        font-style: italic;
-    }
-
   </style>
 </head>
 <body>
@@ -174,17 +146,17 @@
     <div class="nav-container">
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="{{ route('dashboard') }}">Inicio</a></li>
                 <li><a href="{{ route('componentes.index') }}">Gestión</a></li>
-                <li><a href="{{ route('Nosotros') }}">Rider's Hub</a></li>
+                <li><a href="#">Rider's Hub</a></li>
                 <li><a href="{{ route('Soporte') }}">Soporte Técnico</a></li>
             </ul>
         </nav>
         <div>
             <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                PERFIL
-            </button>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    PERFIL
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Editar</a></li>
                     <li><a class="dropdown-item" href="{{ route('logout') }}">Cerrar Sesión</a></li>
@@ -195,55 +167,8 @@
   </header>
 
     <main>
-        <div class="d-flex justify-content-center">
-            <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ asset('img/sram.png') }}" class="d-block w-100" alt="Sram">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/shimano.png') }}" class="d-block w-100" alt="Shimano">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/trek.png') }}" class="d-block w-100" alt="Trek">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/giantNEW.png') }}" class="d-block w-100" alt="Giant">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/campagnoloNEW.png') }}" class="d-block w-100" alt="Campagnolo">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/cube.png') }}" class="d-block w-100" alt="Cube">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
 
-        <div class="d-flex justify-content-center my-4">
-            <a href="{{ route('componentes.index') }}" class="btn btn-secondary">Ir a Componentes</a>
-        </div>
     </main>
-
-    <div class="slogan-container">
-        <h1 class="slogan-title">“Componentes en <span class="font-style">SINTONÍA</span>, stock en <span class="font-style">ARMONÍA</span>”</h1>
-    </div>
 
     <footer class="footer">
         <!-- <div class="container"> -->

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <link rel="icon" type="image/pg" href="{{ asset('img/logoRH.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
@@ -20,6 +21,62 @@
         min-height: 100vh;
         margin: 0;
         padding-bottom: 100px; /* Agregar espacio para el footer */
+    }
+
+    /* Estilos para el logo y la barra de navegación */
+    header {
+        padding: 0.5rem 20px;
+        background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+ 
+    .logo {
+        max-width: 100px;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 5rem;
+     }
+
+    nav {
+      text-align: right;
+      width:fit-content;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      display: inline-block;
+      border-right: 1px solid;
+    }
+
+    nav ul li:last-child {
+      border-right: none;
+    }
+
+
+    nav ul li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      background-color: #ddd;
     }
 
     /* FOOTER */
@@ -61,7 +118,6 @@
     main {
         padding-top: 1rem;
     }
-
     </style>
 
 </head>
@@ -73,7 +129,7 @@
         <!-- <div class="container"> -->
             <div class="footer-content">
                 <span>
-                    Copyright © 2023 Rider´s Hub
+                    Copyright © 2023 Rider's Hub
                     <br>
                     Contacto: ridershub@ridersdata.com
                     <br>

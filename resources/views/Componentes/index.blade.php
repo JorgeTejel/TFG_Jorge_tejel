@@ -4,6 +4,33 @@
 
 @section('contenido')
 
+<header>
+    <div class="logo">
+        <img src="{{ asset('img/logoRH.png') }}" alt="Logo" width="60px">
+    </div>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="{{ route('dashboard') }}">Inicio</a></li>
+                <li><a href="{{ route('componentes.index') }}">Gestión</a></li>
+                <li><a href="{{ route('Nosotros') }}">Rider's Hub</a></li>
+                <li><a href="{{ route('Soporte') }}">Soporte Técnico</a></li>
+            </ul>
+        </nav>
+        <div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    PERFIL
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Editar</a></li>
+                    <li><a class="dropdown-item" href="{{ route('logout') }}">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
 <main>
 
     <div class="container py-4" style="background: white; padding: 4rem; margin: 0 auto; border-radius: 10px; height: fit-content;">
@@ -50,8 +77,8 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">Volver al Dashboard</a>
-        
+
+        <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">Volver al Inicio</a>
 
     </div>
 </main>

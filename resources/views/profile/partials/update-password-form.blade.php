@@ -1,3 +1,6 @@
+
+
+
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
@@ -46,3 +49,12 @@
         </div>
     </form>
 </section>
+
+<script>
+   let logo = document.querySelector('svg');
+   let img = document.createElement('img');
+    img.src = '/img/logoRH.png';
+    img.alt = 'logo';
+    img.width= '40';
+    logo.parentNode.replaceChild(img, logo);
+</script>
