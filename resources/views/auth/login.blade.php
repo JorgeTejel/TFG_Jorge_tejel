@@ -45,11 +45,15 @@
     }
 
     form {
-        min-width: 20rem;
+        min-width: 25rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
         font-size: 1.1rem;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 0px 48px 7px rgba(0,0,0,0.23);
     }
 
     .input__field {

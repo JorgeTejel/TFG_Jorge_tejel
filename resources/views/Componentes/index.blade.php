@@ -33,7 +33,8 @@
 
 <main>
 
-    <div class="container py-4" style="background: white; padding: 4rem; margin: 0 auto; border-radius: 10px; height: fit-content;">
+    <div class="container py-4" style="background: white; padding: 4rem; margin: 0 auto; border-radius: 10px; height: fit-content; max-height: 697px; 
+    overflow-y: auto;">
         <h2>Stock de Componentes</h2>
 
 
@@ -76,9 +77,11 @@
                 </tr>
                 @endforeach
             </tbody>
+            <!-- <tfooter>
+                <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">Volver al Inicio</a>
+            </tfooter> -->
         </table>
 
-        <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">Volver al Inicio</a>
 
     </div>
 </main>

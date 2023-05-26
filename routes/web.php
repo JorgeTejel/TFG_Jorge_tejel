@@ -27,7 +27,8 @@ Route::resource('/componentes', ComponenteController::class);
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $user = \Auth::user();
+    return view('dashboard', ['user' => $user]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/nosotros', function () {
