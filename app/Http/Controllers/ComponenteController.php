@@ -15,8 +15,8 @@ class ComponenteController extends Controller
     public function index()
     {               
         $Componente = componente::all();
-        return view('Componentes.index', ['Componente' => $Componente]);   //Este Componentes viene de las views
-        
+        $user = \Auth::user();
+        return view('Componentes.index', ['Componente' => $Componente], ['user' => $user]);   //Este Componentes viene de las views
     }
 
     /**

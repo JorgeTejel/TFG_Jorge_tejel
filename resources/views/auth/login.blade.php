@@ -106,6 +106,8 @@
 
 </style>
 
+<title>Rider's Hub</title>
+
 <main>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />

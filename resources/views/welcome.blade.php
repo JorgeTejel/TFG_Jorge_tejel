@@ -174,7 +174,7 @@
                         @auth
                             <a href="{{ url('/dashboard') }}" class="btn btn-secondary btn-lg">VER MÁS</a>
                         @else
-                            <a href="{{ route('login') }}" class="btn btn-secondary btn-lg">VER MÁS</a>
+                            <a href="{{ route('register') }}" class="btn btn-secondary btn-lg">VER MÁS</a>
                         @endauth
                     </div>
                     <!-- BOTÓN VER MÁS -->

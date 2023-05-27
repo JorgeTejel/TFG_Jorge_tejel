@@ -107,6 +107,9 @@
     }
 </style>
 
+<title>Rider's Hub</title>
+<link rel="icon" type="image/pg" href="{{ asset('img/logoRH.png') }}">
+
 <main>
     <div class="col_left"></div>
     <div class="col_right">

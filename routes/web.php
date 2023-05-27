@@ -32,11 +32,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/nosotros', function () {
-    return view('Nosotros');
+    $user = \Auth::user();
+    return view('Nosotros', ['user' => $user]);
 })->name('Nosotros');
 
 Route::get('/soporte', function () {
-    return view('Soporte');
+    $user = \Auth::user();
+    return view('Soporte', ['user' => $user]);
 })->name('Soporte');
 
 Route::middleware('auth')->group(function () {
