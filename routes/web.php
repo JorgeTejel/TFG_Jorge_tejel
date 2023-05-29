@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComponenteController;
+use App\Http\Controllers\SoporteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,10 +37,13 @@ Route::get('/nosotros', function () {
     return view('Nosotros', ['user' => $user]);
 })->name('Nosotros');
 
-Route::get('/soporte', function () {
+Route::get('/Soporte', function () {
     $user = \Auth::user();
     return view('Soporte', ['user' => $user]);
 })->name('Soporte');
+
+Route::get('/formulario', [SoporteController::class, 'index']);
+Route::post('/formulario', [SoporteController::class, 'store']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

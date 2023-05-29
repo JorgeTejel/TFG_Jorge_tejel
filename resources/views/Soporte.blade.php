@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rider's Hub</title>
+  <title>Soporte Técnico | Rider's Hub</title>
   <link rel="icon" type="image/pg" href="{{ asset('img/logoRH.png') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -136,6 +136,95 @@
         gap: 3rem;
     }
 
+    /* TITULO */
+    .titulo {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 60px;
+      color: #333333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+
+    .parrafo {
+      font-family: 'Times New Roman', serif;
+      font-size: 20px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contenedor__principal {
+      margin-left: 300px; /* Ajusta el valor según tus necesidades */
+      margin-right: 300px; /* Ajusta el valor según tus necesidades */
+    }
+
+    /* FORMULARIO */
+    .col_right {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    form {
+        min-width: 35rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 1.1rem;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 0px 48px 7px rgba(0,0,0,0.23);
+        margin-bottom: 10px;
+    }
+
+    .input__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        border: 1px solid #bcbcbc;
+    }
+
+    .remember {
+        font-size: 1rem;
+    }
+    
+    .btn_primary {
+        border: none;
+        padding: 0.8rem;
+        font-size: 1rem;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        box-sizing: content-box;
+        transition: 0.1s background ease-in;
+        max-height: 30px;
+        border: 2px solid black;
+    }
+
+    .btn_primary:hover {
+       background: white;
+       color: black;
+    }
+
+    .field_remember {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
   </style>
 </head>
 <body>
@@ -155,7 +244,7 @@
         <div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                {{ $user->name }}
+                PERFIL
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Editar</a></li>
@@ -167,7 +256,56 @@
   </header>
 
     <main>
+      <div class="contenedor__principal">
+        <div class="section__1">
+            <h1 class="titulo">¿Algún problema?</h1>
+            <p class="parrafo">En Rider's Hub, nos preocupamos por brindarte la mejor experiencia y un servicio de calidad. Si encuentras algún fallo o problema en nuestra plataforma, te agradeceríamos que nos informaras al respecto. Tu colaboración nos ayudará a mejorar y ofrecerte un servicio aún mejor.</p>
+            <p class="parrafo">Por favor, rellena este formulario a continuación para proporcionarnos los detalles sobre el fallo que has encontrado. Nuestro equipo de soporte técnico trabajará para resolverlo lo antes posible.</p>
+        </div>
 
+        <div>
+          <div class="col_right">
+            <form action="/formulario" method="POST">
+                @csrf
+
+                <div class="input__field">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+
+                <div class="input__field">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="input__field">
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" name="telefono" id="telefono" required>
+                </div>
+
+                <div class="input__field">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" name="fecha" id="fecha" required>
+                </div>
+
+                <div class="input__field">
+                    <label for="error">Error:</label>
+                    <textarea name="error" id="error" placeholder="Maximo 220 palabras." required></textarea>
+                </div>
+
+                <button class="btn_primary">
+                  {{ __('ENVIAR') }}
+                </button>
+            </form>
+          </div>
+
+          @if (session('success'))
+            <div class="alert alert-success">
+              {{ session('success') }}
+            </div>
+          @endif
+        </div>
+      </div>
     </main>
 
     <footer class="footer">

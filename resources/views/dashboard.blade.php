@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rider's Hub</title>
+  <title>Inicio | Rider's Hub</title>
   <link rel="icon" type="image/pg" href="{{ asset('img/logoRH.png') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
