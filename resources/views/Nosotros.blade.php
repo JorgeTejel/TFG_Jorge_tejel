@@ -136,6 +136,48 @@
         gap: 3rem;
     }
 
+    /* TITULO */
+    .titulo {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 60px;
+      color: #333333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+    }
+
+    /* IMAGEN LOGO */
+
+    .logoExtendido {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .parrafo {
+      font-family: 'Times New Roman', serif;
+      font-size: 20px;
+      align-items: center;
+    }
+
+    .contenedor__principal {
+      margin-left: 300px; /* Ajusta el valor según tus necesidades */
+      margin-right: 300px; /* Ajusta el valor según tus necesidades */
+    }
+
+    .section__2 {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .section__2.1 {
+      display: flex;
+      flex-direction: column;
+    }
+
   </style>
 </head>
 <body>
@@ -167,7 +209,33 @@
   </header>
 
     <main>
+      <div  class="logoExtendido">
+        <img src="/img/logoRH.png" alt="Riders Hub" width="100px">
+      </div>
 
+      <div class="contenedor__principal">
+        <div class="section__1">
+          <h1 class="titulo">NUESTRA HISTORIA</h1>
+          <p class="parrafo">Tras dedicarme apasionadamente al mundo del ciclismo durante muchos años, en el año 2023 tomé la valiente decisión de fundar <b>Rider's Hub</b>, una empresa destinada a destacar y expandirse en los medios digitales. Con determinación y entusiasmo, nos embarcamos en esta aventura con el firme propósito de compartir nuestra pasión por las dos ruedas y conectar con una comunidad apasionada de ciclistas de todo el mundo.</p>
+          <br>
+          <p class="parrafo">A través de nuestro portal web, ofrecemos un servicio eficiente y accesible para la gestión de componentes de bicicleta a todos nuestros usuarios.</p>
+        </div>
+
+        <div class="section__2">
+          <img src="/img/biciGris.png" alt="Riders Hub" width="50%">
+          <div class="section__2.1">
+            <p class="parrafo">En Rider's Hub, nos esforzamos por ofrecer un servicio potente, único y accesible en el mundo del ciclismo. Nuestro estilo refleja la tradición y la pasión de este deporte para brindar una experiencia excepcional a nuestros usuarios.</p>
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+      
+      
+      
     </main>
 
     <footer class="footer">
