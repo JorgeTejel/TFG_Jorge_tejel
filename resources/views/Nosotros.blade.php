@@ -147,6 +147,28 @@
       margin-bottom: 40px;
     }
 
+    .titulo2 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 60px;
+      color: #333333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .titulo3 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 30px;
+      color: #333333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
     /* IMAGEN LOGO */
 
     .logoExtendido {
@@ -161,6 +183,13 @@
       font-family: 'Times New Roman', serif;
       font-size: 20px;
       align-items: center;
+    }
+
+    .parrafo2 {
+      font-family: 'Times New Roman', serif;
+      font-size: 20px;
+      align-items: center;
+      text-align: center;
     }
 
     .contenedor__principal {
@@ -224,13 +253,56 @@
         <div class="section__2">
           <img src="/img/biciGris.png" alt="Riders Hub" width="50%">
           <div class="section__2.1">
-            <p class="parrafo">En Rider's Hub, nos esforzamos por ofrecer un servicio potente, único y accesible en el mundo del ciclismo. Nuestro estilo refleja la tradición y la pasión de este deporte para brindar una experiencia excepcional a nuestros usuarios.</p>
+            <p class="parrafo">En Rider's Hub, nos esforzamos por ofrecer un servicio <b>potente</b>, <b>único</b> y <b>accesible</b> en el mundo del ciclismo. Nuestro estilo refleja la tradición y la pasión de este deporte para brindar una experiencia excepcional a nuestros usuarios.</p>
+            <p class="parrafo">Y como amantes del ciclismo, en nuestro portal web siempre hemos buscado lo siguiente:</p>
             <ul>
-              <li></li>
+              <li class="parrafo">Una página web accesible, útil y eficiente para todos los usuarios y tiendas del sector del ciclismo. Nuestro enfoque se centra en brindar una experiencia <b>fluida</b> y <b>satisfactoria</b>, facilitando la gestión del producto y la interacción con nuestra plataforma.</li>
+              <br>
+              <li class="parrafo">Nuestro enfoque se centra en brindarte una experiencia de usuario excepcional, facilitando la navegación intuitiva, la búsqueda eficiente de productos y la interacción fluida con la comunidad ciclista.</li>
             </ul>
           </div>
         </div>
+
+        <h1 class="titulo2">¿NUESTROS DISEÑOS?</h1>
+
+        <div class="d-flex justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide w-75" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('img/logoRHV1.png') }}" class="d-block w-100" alt="LOGO1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/logoRHV2.png') }}" class="d-block w-100" alt="LOGO2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/logoRHV3.png') }}" class="d-block w-100" alt="LOGO3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/logoRHV4.png') }}" class="d-block w-100" alt="LOGO4">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <p class="parrafo2">En el diseño del logo tanto en los colores coorporativos de la empresa, nos insipiramos en los dientes de un piñon de cambios y en esa gama de colores del negro al blanco, haciendo referencia a esa tonalidad sucia de una cadena, platos o piñoes de una bicicleta con rodaje.</p>
+        <p class="parrafo2">Los pequeños detalles son los que realmente marcan la diferencia. Una buena organizacion y optimización de tu gestión hace que un rato en Rider's Hub pase de ser bueno, a ser inolvidable.</p>
         
+        <h4 class="titulo3">Asi que... ¡A GESTIONAR!</h4>
+
       </div>
 
       
@@ -263,7 +335,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-
+    
 </body>
 </html>
 
