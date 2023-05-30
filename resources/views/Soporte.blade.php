@@ -289,7 +289,7 @@
                 </div>
 
                 <div class="input__field">
-                    <label for="error">Error:</label>
+                    <label for="error">Incidencia:</label>
                     <textarea name="error" id="error" placeholder="Maximo 220 palabras." required></textarea>
                 </div>
 
