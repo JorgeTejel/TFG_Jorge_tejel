@@ -161,12 +161,18 @@
     }
 
     /* FORMULARIO */
-    .col_right {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
+    .zona_formuario {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      height: 700px;
+    }
+
+    .imgBici {
+      border-radius: 10px;
+      height: 100%
     }
 
     form {
@@ -180,6 +186,7 @@
         border-radius: 10px;
         box-shadow: 0px 0px 48px 7px rgba(0,0,0,0.23);
         margin-bottom: 10px;
+        height: 100%;
     }
 
     .input__field {
@@ -264,7 +271,8 @@
         </div>
 
         <div>
-          <div class="col_right">
+          <div class="zona_formuario">
+            <img class="imgBici" src="/img/jorgeBici.png" alt="TejelBici">
             <form action="/formulario" method="POST">
                 @csrf
 
@@ -299,6 +307,8 @@
             </form>
           </div>
 
+          <br>
+          
           @if (session('success'))
             <div class="alert alert-success">
               {{ session('success') }}

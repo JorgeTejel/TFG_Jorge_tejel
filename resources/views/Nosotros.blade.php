@@ -298,7 +298,7 @@
             </div>
         </div>
 
-        <p class="parrafo2">En el diseño del logo tanto en los colores coorporativos de la empresa, nos insipiramos en los dientes de un piñon de cambios y en esa gama de colores del negro al blanco, haciendo referencia a esa tonalidad sucia de una cadena, platos o piñoes de una bicicleta con rodaje.</p>
+        <p class="parrafo2">En el diseño del logo tanto en los colores coorporativos de la empresa, nos insipiramos en los dientes de un piñon de cambios y en esa gama de colores del negro al blanco, haciendo referencia a esa tonalidad sucia de una cadena, platos o piñones de una bicicleta con rodaje.</p>
         <p class="parrafo2">Los pequeños detalles son los que realmente marcan la diferencia. Una buena organizacion y optimización de tu gestión hace que un rato en Rider's Hub pase de ser bueno, a ser inolvidable.</p>
         
         <h4 class="titulo3">Asi que... ¡A GESTIONAR!</h4>
