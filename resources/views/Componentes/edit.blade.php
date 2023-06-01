@@ -19,6 +19,7 @@
         </div>
         @endif
 
+        <!-- FORMULARIO -->
         <form action="{{ url('componentes/'.$componente->id) }}" method="post">
             @method("PUT")
             @csrf
@@ -74,5 +75,6 @@
             <a href="{{ url('componentes')}}" class="btn btn-secondary">Regresar</a>
             <button type="submit" class="btn btn-success">Guardar</button>
         </form>
+        <!-- FORMULARIO -->
     </div>
 </main>

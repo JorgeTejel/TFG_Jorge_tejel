@@ -8,17 +8,17 @@
      itegrity="sha384-rbsA2VBQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
     crossorigin="anonymous">
   <style>
-     /* FOOTER */
+
     body {
         background-image: url('{{ asset("img/fondogris.png") }}');
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 100vh;
         margin: 0;
-        padding-bottom: 100px; /* Agregar espacio para el footer */
+        padding-bottom: 100px;
     }
  
-    /* Estilos para el logo y la barra de navegación */
+    /* ESTILOS PARA EL LOGO Y LA BARRA DE NAVEGACIÓN */
     header {
         padding: 0.5rem 20px;
         background: white;
@@ -74,7 +74,7 @@
       background-color: #ddd;
     }
 
-    /* Estilos para el menú desplegable */
+    /* ESTILOS PARA EL MENU DESPLEGABLE */
     .dropdown-content {
       display: none;
       position: absolute;
@@ -168,9 +168,13 @@
 </head>
 <body>
   <header>
+    <!-- LOGO -->
     <div class="logo">
       <img src="{{ asset('img/logoRH.png') }}" alt="Logo" width="60px">
     </div>
+    <!-- LOGO -->
+
+    <!-- NAVBAR -->
     <div class="nav-container">
         <nav>
             <ul>
@@ -192,9 +196,11 @@
             </div>
         </div>
     </div>
+    <!-- NAVBAR -->
   </header>
 
     <main>
+        <!-- CAROUSEL -->
         <div class="d-flex justify-content-center">
             <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -235,16 +241,22 @@
                 </button>
             </div>
         </div>
+        <!-- CAROUSEL -->
 
+        <!-- BOTON -->
         <div class="d-flex justify-content-center my-4">
             <a href="{{ route('componentes.index') }}" class="btn btn-secondary">Ir a Componentes</a>
         </div>
+        <!-- BOTON -->
     </main>
 
+    <!-- ESLOGAN -->
     <div class="slogan-container">
         <h1 class="slogan-title">“Componentes en <span class="font-style">SINTONÍA</span>, stock en <span class="font-style">ARMONÍA</span>”</h1>
     </div>
+    <!-- ESLOGAN -->
 
+    <!-- FOOTER -->
     <footer class="footer">
         <!-- <div class="container"> -->
             <div class="footer-content">
@@ -266,7 +278,9 @@
             </div>
         <!-- </div> -->
     </footer>
+    <!-- FOOTER -->
 
+    <!-- SCRIP BOOTSTRAP 5.2.3 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>

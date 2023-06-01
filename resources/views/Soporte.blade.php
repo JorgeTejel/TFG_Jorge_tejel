@@ -17,8 +17,8 @@
         margin: 0;
         padding-bottom: 100px; /* Agregar espacio para el footer */
     }
- 
-    /* Estilos para el logo y la barra de navegación */
+
+    /* ESTILOS PARA EL LOGO Y LA BARRA DE NAVEGACIÓN */
     header {
         padding: 0.5rem 20px;
         background: white;
@@ -74,7 +74,7 @@
       background-color: #ddd;
     }
 
-    /* Estilos para el menú desplegable */
+    /* ESTILOS PARA EL MENU DESPLEGABLE */
     .dropdown-content {
       display: none;
       position: absolute;
@@ -99,6 +99,7 @@
       background-color: #f1f1f1;
     }
 
+    /* CAROUSEL */
     .carousel {
         max-height: 32rem;
         overflow:hidden;
@@ -156,8 +157,8 @@
     }
 
     .contenedor__principal {
-      margin-left: 300px; /* Ajusta el valor según tus necesidades */
-      margin-right: 300px; /* Ajusta el valor según tus necesidades */
+      margin-left: 300px;
+      margin-right: 300px;
     }
 
     /* FORMULARIO */
@@ -236,9 +237,13 @@
 </head>
 <body>
   <header>
+    <!-- LOGO -->
     <div class="logo">
       <img src="{{ asset('img/logoRH.png') }}" alt="Logo" width="60px">
     </div>
+    <!-- LOGO -->
+
+    <!-- NAVBAR -->
     <div class="nav-container">
         <nav>
             <ul>
@@ -260,89 +265,97 @@
             </div>
         </div>
     </div>
+    <!-- NAVBAR -->
   </header>
 
-    <main>
-      <div class="contenedor__principal">
-        <div class="section__1">
-            <h1 class="titulo">¿Algún problema?</h1>
-            <p class="parrafo">En Rider's Hub, nos preocupamos por brindarte la mejor experiencia y un servicio de calidad. Si encuentras algún fallo o problema en nuestra plataforma, te agradeceríamos que nos informaras al respecto. Tu colaboración nos ayudará a mejorar y ofrecerte un servicio aún mejor.</p>
-            <p class="parrafo">Por favor, rellena este formulario a continuación para proporcionarnos los detalles sobre el fallo que has encontrado. Nuestro equipo de soporte técnico trabajará para resolverlo lo antes posible.</p>
-        </div>
+  <main>
+    <div class="contenedor__principal">
 
-        <div>
-          <div class="zona_formuario">
-            <img class="imgBici" src="/img/jorgeBici.png" alt="TejelBici">
-            <form action="/formulario" method="POST">
-                @csrf
-
-                <div class="input__field">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required>
-                </div>
-
-                <div class="input__field">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-
-                <div class="input__field">
-                    <label for="telefono">Telefono:</label>
-                    <input type="text" name="telefono" id="telefono" required>
-                </div>
-
-                <div class="input__field">
-                    <label for="fecha">Fecha:</label>
-                    <input type="date" name="fecha" id="fecha" required>
-                </div>
-
-                <div class="input__field">
-                    <label for="error">Incidencia:</label>
-                    <textarea name="error" id="error" placeholder="Maximo 220 palabras." required></textarea>
-                </div>
-
-                <button class="btn_primary">
-                  {{ __('ENVIAR') }}
-                </button>
-            </form>
-          </div>
-
-          <br>
-          
-          @if (session('success'))
-            <div class="alert alert-success">
-              {{ session('success') }}
-            </div>
-          @endif
-        </div>
+      <!-- TEXTO -->
+      <div class="section__1">
+          <h1 class="titulo">¿Algún problema?</h1>
+          <p class="parrafo">En Rider's Hub, nos preocupamos por brindarte la mejor experiencia y un servicio de calidad. Si encuentras algún fallo o problema en nuestra plataforma, te agradeceríamos que nos informaras al respecto. Tu colaboración nos ayudará a mejorar y ofrecerte un servicio aún mejor.</p>
+          <p class="parrafo">Por favor, rellena este formulario a continuación para proporcionarnos los detalles sobre el fallo que has encontrado. Nuestro equipo de soporte técnico trabajará para resolverlo lo antes posible.</p>
       </div>
-    </main>
+      <!-- TEXTO -->
 
-    <footer class="footer">
-        <!-- <div class="container"> -->
-            <div class="footer-content">
-                <span>
-                    Copyright © 2023 Rider's Hub
-                    <br>
-                    Contacto: ridershub@ridersdata.com
-                    <br>
-                    Dirección: Pl. de Antonio Beltrán Martínez, 1, 50002 Zaragoza
-                </span>
-                <div class="footer-col">
-                    <div class="social-media-container">
-                        <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" width="40px" class="social-logo"></a>
-                        <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" width="40px" class="social-logo"></a>
-                        <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" width="40px" class="social-logo"></a>
-                    </div>
-                    <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
-                </div>
-            </div>
-        <!-- </div> -->
-    </footer>
+      <!-- FORMULARIO -->
+      <div>
+        <div class="zona_formuario">
+          <img class="imgBici" src="/img/jorgeBici.png" alt="TejelBici">
+          <form action="/formulario" method="POST">
+              @csrf
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+              <div class="input__field">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" name="nombre" id="nombre" required>
+              </div>
+
+              <div class="input__field">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" required>
+              </div>
+
+              <div class="input__field">
+                  <label for="telefono">Telefono:</label>
+                  <input type="text" name="telefono" id="telefono" required>
+              </div>
+
+              <div class="input__field">
+                  <label for="fecha">Fecha:</label>
+                  <input type="date" name="fecha" id="fecha" required>
+              </div>
+
+              <div class="input__field">
+                  <label for="error">Incidencia:</label>
+                  <textarea name="error" id="error" placeholder="Maximo 220 palabras." required></textarea>
+              </div>
+
+              <button class="btn_primary">
+                {{ __('ENVIAR') }}
+              </button>
+          </form>
+        </div>
+        
+
+        <br>
+        
+        @if (session('success'))
+          <div class="alert alert-success">
+            {{ session('success') }}
+          </div>
+        @endif
+      </div>
+      <!-- FORMULARIO -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+          <div class="footer-content">
+              <span>
+                  Copyright © 2023 Rider's Hub
+                  <br>
+                  Contacto: ridershub@ridersdata.com
+                  <br>
+                  Dirección: Pl. de Antonio Beltrán Martínez, 1, 50002 Zaragoza
+              </span>
+              <div class="footer-col">
+                  <div class="social-media-container">
+                      <a href="#"><img src="{{ asset('img/logofacebook.png') }}" alt="Facebook Logo" width="40px" class="social-logo"></a>
+                      <a href="#"><img src="{{ asset('img/logotwitter.png') }}" alt="Twitter Logo" width="40px" class="social-logo"></a>
+                      <a href="#"><img src="{{ asset('img/logoinstagram.png') }}" alt="Instagram Logo" width="40px" class="social-logo"></a>
+                  </div>
+                  <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
+              </div>
+          </div>
+  </footer>
+  <!-- FOOTER -->
+
+  <!-- SCRIPT BOOTSTRAP 5.2.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"></script>
 
 </body>
 </html>

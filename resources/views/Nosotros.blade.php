@@ -15,10 +15,10 @@
         background-size: cover;
         min-height: 100vh;
         margin: 0;
-        padding-bottom: 100px; /* Agregar espacio para el footer */
+        padding-bottom: 100px;
     }
  
-    /* Estilos para el logo y la barra de navegación */
+    /* ESTILOS PARA EL LOGO Y LA BARRA DE NAVEGACIÓN */
     header {
         padding: 0.5rem 20px;
         background: white;
@@ -74,7 +74,7 @@
       background-color: #ddd;
     }
 
-    /* Estilos para el menú desplegable */
+    /* ESTILOS PARA EL MENU DESPLEGABLE */
     .dropdown-content {
       display: none;
       position: absolute;
@@ -99,6 +99,7 @@
       background-color: #f1f1f1;
     }
 
+    /* CAROUSEL */
     .carousel {
         max-height: 32rem;
         overflow:hidden;
@@ -193,8 +194,8 @@
     }
 
     .contenedor__principal {
-      margin-left: 300px; /* Ajusta el valor según tus necesidades */
-      margin-right: 300px; /* Ajusta el valor según tus necesidades */
+      margin-left: 300px;
+      margin-right: 300px;
     }
 
     .section__2 {
@@ -211,9 +212,13 @@
 </head>
 <body>
   <header>
+    <!-- LOGO -->
     <div class="logo">
       <img src="{{ asset('img/logoRH.png') }}" alt="Logo" width="60px">
     </div>
+    <!-- LOGO -->
+
+    <!-- NAVBAR -->
     <div class="nav-container">
         <nav>
             <ul>
@@ -235,21 +240,28 @@
             </div>
         </div>
     </div>
+    <!-- NAVBAR -->
   </header>
 
     <main>
+      <!-- LOGO -->
       <div  class="logoExtendido">
         <img src="/img/logoRH.png" alt="Riders Hub" width="100px">
       </div>
+      <!-- LOGO -->
 
       <div class="contenedor__principal">
+
+        <!-- TEXTO 1 -->
         <div class="section__1">
           <h1 class="titulo">NUESTRA HISTORIA</h1>
           <p class="parrafo">Tras dedicarme apasionadamente al mundo del ciclismo durante muchos años, en el año 2023 tomé la valiente decisión de fundar <b>Rider's Hub</b>, una empresa destinada a destacar y expandirse en los medios digitales. Con determinación y entusiasmo, nos embarcamos en esta aventura con el firme propósito de compartir nuestra pasión por las dos ruedas y conectar con una comunidad apasionada de ciclistas de todo el mundo.</p>
           <br>
           <p class="parrafo">A través de nuestro portal web, ofrecemos un servicio eficiente y accesible para la gestión de componentes de bicicleta a todos nuestros usuarios.</p>
         </div>
+        <!-- TEXTO 1 -->
 
+        <!-- TEXTO 2 -->
         <div class="section__2">
           <img src="/img/biciGris.png" alt="Riders Hub" width="50%">
           <div class="section__2.1">
@@ -262,9 +274,11 @@
             </ul>
           </div>
         </div>
+        <!-- TEXTO 2 -->
 
         <h1 class="titulo2">¿NUESTROS DISEÑOS?</h1>
 
+        <!-- CAROUSEL -->
         <div class="d-flex justify-content-center">
             <div id="carouselExampleIndicators" class="carousel slide w-75" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -297,21 +311,20 @@
                 </button>
             </div>
         </div>
+        <!-- CAROUSEL -->
 
+        <!-- TEXTO 3 -->
         <p class="parrafo2">En el diseño del logo tanto en los colores coorporativos de la empresa, nos insipiramos en los dientes de un piñon de cambios y en esa gama de colores del negro al blanco, haciendo referencia a esa tonalidad sucia de una cadena, platos o piñones de una bicicleta con rodaje.</p>
         <p class="parrafo2">Los pequeños detalles son los que realmente marcan la diferencia. Una buena organizacion y optimización de tu gestión hace que un rato en Rider's Hub pase de ser bueno, a ser inolvidable.</p>
-        
+        <!-- TEXTO 3 -->
+
         <h4 class="titulo3">Asi que... ¡A GESTIONAR!</h4>
 
       </div>
-
-      
-      
-      
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <!-- <div class="container"> -->
             <div class="footer-content">
                 <span>
                     Copyright © 2023 Rider's Hub
@@ -329,14 +342,13 @@
                     <img src="{{ asset('img/logoextendido(t)B2.png') }}" alt="Logo Empresa" class="logo">
                 </div>
             </div>
-        <!-- </div> -->
     </footer>
+    <!-- FOOTER -->
 
+    <!-- SCRIP BOOTSTRAP 5.2.3 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
 </body>
 </html>
-
-

@@ -5,9 +5,13 @@
 @section('contenido')
 
 <header>
+    <!-- LOGO -->
     <div class="logo">
         <img src="{{ asset('img/logoRH.png') }}" alt="Logo" width="60px">
     </div>
+    <!-- LOGO -->
+
+    <!-- NAVBAR -->
     <div class="nav-container">
         <nav>
             <ul>
@@ -29,19 +33,19 @@
             </div>
         </div>
     </div>
+    <!-- NAVBAR -->
 </header>
 
+<!-- CRUD DE LARAVEL -->
 <main>
 
     <div class="container py-4" style="background: white; padding: 4rem; margin: 0 auto; border-radius: 10px; height: fit-content; max-height: 697px; 
     overflow-y: auto;">
         <h2>Stock de Componentes</h2>
 
-
         <a href="{{url('componentes/create')}}" class="btn btn-primary btn-sm">Nuevo Registro</a>
-    
-        <table class="table table-hover">
 
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>#</th>
@@ -77,11 +81,7 @@
                 </tr>
                 @endforeach
             </tbody>
-            <!-- <tfooter>
-                <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">Volver al Inicio</a>
-            </tfooter> -->
         </table>
-
-
     </div>
 </main>
+<!-- CRUD DE LARAVEL -->
